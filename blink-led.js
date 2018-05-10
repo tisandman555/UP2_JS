@@ -4,6 +4,7 @@ console.log('MRAA Version: ' + mraa.getVersion()); //write the mraa version to t
 
 mraa.addSubplatform(mraa.GROVEPI,"0");
 
+//add your code here
 var myLed = new mraa.Gpio(512+4);  //LED -- D4
 myLed.dir(mraa.DIR_OUT); //set the gpio direction to output
 var ledState = true; //Boolean to hold the state of Led

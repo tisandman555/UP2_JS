@@ -4,15 +4,17 @@ console.log('MRAA Version: ' + mraa.getVersion()); //write the mraa version to t
 
 mraa.addSubplatform(mraa.GROVEPI,"0");
 
+//add your code here
 var sensor1 = require('jsupm_th02');
 var th02 = new sensor1.TH02();
 
 function read_sensor()
 {
-	var temp = th02.getTemperature();
+    //get sensor data
+    var temp = th02.getTemperature();
     var humi = th02.getHumidity();
     var timestamp = new Date()/1000;
-	return {'dbid':0,'number':0,'temperature':temp,'humidity':humi,'timestamp':timestamp};
+    return {'dbid':0,'number':0,'temperature':temp,'humidity':humi,'timestamp':timestamp};
 }
 
 
@@ -21,12 +23,14 @@ var client = mqtt.connect('mqtt://test.mosquitto.org');
 //var client = mqtt.connect('tcp://localhost:1883');
 
 client.on('connect',function(){
+    //subscribe to topic
     console.log('connect');
     client.subscribe('user98/sensors/data')
 })
 
 var j=0;
 client.on('message',function(topic,message){
+    //receive a messge
     console.log(topic);
     //message is Buffer
     j+=1;
@@ -36,10 +40,12 @@ client.on('message',function(topic,message){
 
 var i=0
 function periodicActivity() {
-	var sensor_value = read_sensor();
-	i+=1;
+    //read sensor
+    var sensor_value = read_sensor();
+    i+=1;
     console.log('send packet number: '+i);
     sensor_value.number = i;
+    //publish message 
     var mqtt_msg = JSON.stringify(sensor_value);
     client.publish('user98/sensors/data',mqtt_msg);
 };
