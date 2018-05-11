@@ -13,7 +13,7 @@ function read_sensor()
     //get sensor data
     var temp = th02.getTemperature();
     var humi = th02.getHumidity();
-    var timestamp = new Date()/1000;
+    var timestamp = Math.floor(new Date()/1000);
     return {'temperature':temp,'humidity':humi,'timestamp':timestamp};
 }
 
