@@ -52,14 +52,14 @@ client.on('connect',function(){
 var j=0;
 client.on('message',function(topic,message){
     console.log(topic);
-    if(topic=='user98/sensors/data')
+    if(topic==TOPIC_UP2_SENSOR_DATA)
     {
         //message is Buffer
         j+=1;
         var obj = JSON.parse(message);
 		console.log('receive: '+ j + 'times :' + message.toString());
     }
-    if(topic=='user98/control/data')
+    if(topic==TOPIC_UP2_CONTROL_DATA)
     {
         var obj = JSON.parse(message);
          console.log('control/data: '+ String(message));
