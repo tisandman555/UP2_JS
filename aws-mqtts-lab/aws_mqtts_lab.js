@@ -6,7 +6,7 @@
 
 //app deps
 const deviceModule = require('/usr/local/lib/node_modules/aws-iot-device-sdk/device');
-const read_sensor = require('./Finished_Lab2_read_sensor');
+const read_sensor = require('./read_th_sensor');
 
 // node device-example.js --host-name=a1lbizsabp5xcz.iot.us-west-2.amazonaws.com --private-key=UP2-Fanjiang-P_Plus.private.key --client-certificate=UP2-Fanjiang-P_Plus.cert.pem --ca-certificate=root-CA.crt
 
