@@ -6,11 +6,11 @@ NodeJS samples for UP2 hands-on lab
 
   ![alt text](UI/aws_iot_go_to_new_device_config.png?raw=true "Title")
 
-2. init a new device flowing the aws web page tutorial
+2. init a new device following the AWS web page tutorial
 
   ![alt text](UI/aws_iot_init_new_device.png?raw=true "Title")
 
-3. download the connection kit packages, which is an archive(zip) includes several key/cert files
+3. download the connection kit packages, which is an archive(zip) including several key/cert files
 
   ![alt text](UI/aws_iot_connection_kit.png?raw=true "Title")
 
