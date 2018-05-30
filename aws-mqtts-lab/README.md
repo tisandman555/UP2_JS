@@ -37,3 +37,9 @@
   ```shell
   sudo npm install -g aws-iot-device-sdk
   ```
+
+6. run the "aws_mqtts_lab.js" via below shell command
+
+  ```shell
+  sudo node aws_mqtts_lab.js
+  ```
