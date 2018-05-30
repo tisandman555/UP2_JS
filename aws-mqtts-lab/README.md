@@ -7,7 +7,7 @@
 
   ![alt text](UI/aws_iot_init_new_device.png?raw=true "Title")
 
-3. download the connection kit packages, which is an archive(zip) including several key/cert files
+3. download the connection kit packages, which is an archive(zip) including several key/cert files, then unzip the files to working dir.
 
   ![alt text](UI/aws_iot_connection_kit.png?raw=true "Title")
 
@@ -30,4 +30,10 @@
      host: 'a1lbizsabp5xcz.iot.us-west-2.amazonaws.com', // reppace with your own
      debug: true // 'true' to view debug information
   });
+  ```
+
+5. install the aws-iot-device-sdk
+
+  ```shell
+  sudo npm install -g aws-iot-device-sdk
   ```
