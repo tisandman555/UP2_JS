@@ -4,11 +4,11 @@ NodeJS samples for UP2 hands-on lab
 # how to run aws_mqtts_lab.js
 1. be sure you have successfully run the other labs at least including the lab Finished_Lab2_read_sensor.js
 
-2. in your aws account, init a new device flowing the aws web page tutorial
+2. in your AWS account, init a new device flowing the aws web page tutorial at https://us-west-2.console.aws.amazon.com/iotv2/home?region=us-west-2#/connectdevice/
 
   ![alt text](UI/aws_iot_init_new_device.png?raw=true "Title")
 
-3. download the connection kit packages, which includes several key/cert files
+3. download the connection kit packages, which is an archive(zip) includes several key/cert files
 
   ![alt text](UI/aws_iot_connection_kit.png?raw=true "Title")
 
