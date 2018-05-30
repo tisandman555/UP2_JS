@@ -22,3 +22,6 @@ function periodicActivity() {
 };
 
 setInterval(periodicActivity, 1000); //call the periodicActivity function every second
+
+// add by fanjiang.pei@intel
+module.exports = read_sensor
