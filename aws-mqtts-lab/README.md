@@ -10,12 +10,11 @@
 3. download the connection kit packages, which is an archive(zip) including several key/cert files, then unzip the files to source code dir.
 
   ![alt text](UI/aws_iot_connection_kit.png?raw=true "Title")
-
-4. edit aws_mqtts_lab.js to match your own UP2 board and aws account settings, following below comments
+4. edit aws_mqtts_lab.js to match your own UP2 board and AWS account settings, following below comments
 
   ```java
   const my_topic = 'com/intel/fpei/up2'; // the topic you want to publish to aws
-  const interval = 2000; // interval between each publish
+  const interval = 5000; // interval between each publish
 
   const device = deviceModule({
      keyPath: 'UP2-Fanjiang-P_Plus.private.key', // replace with your own key
