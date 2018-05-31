@@ -11,8 +11,8 @@ const read_sensor = require('./read_th_sensor');
 // node device-example.js --host-name=a1lbizsabp5xcz.iot.us-west-2.amazonaws.com --private-key=UP2-Fanjiang-P_Plus.private.key --client-certificate=UP2-Fanjiang-P_Plus.cert.pem --ca-certificate=root-CA.crt
 
 //begin module
-const my_topic = 'com/intel/fpei/up2-01';
-const interval = 2000; // 2000ms
+const my_topic = 'com/intel/fpei/up2';
+const interval = 5000; // 5000ms
 
 const device = deviceModule({
    keyPath: 'UP2-Fanjiang-P_Plus.private.key',
@@ -21,7 +21,7 @@ const device = deviceModule({
    clientId: 'fpei',
    region: 'us-west-2',
    baseReconnectTimeMs: 4000,
-   keepalive: 300,
+   keepalive: 0,
    protocol: 'mqtts',
    port: 8883,
    host: 'a1lbizsabp5xcz.iot.us-west-2.amazonaws.com',
