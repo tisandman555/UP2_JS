@@ -24,7 +24,7 @@
      clientId: 'fpei', // make your self id
      region: 'us-west-2', // change to your own if it's different
      baseReconnectTimeMs: 4000, 
-     keepalive: 300,
+     keepalive: 0,
      protocol: 'mqtts', 
      port: 8883,
      host: 'a1lbizsabp5xcz.iot.us-west-2.amazonaws.com', // reppace with your own
@@ -43,3 +43,12 @@
   ```shell
   sudo node aws_mqtts_lab.js
   ```
+  you will see the mqtt lab running, with outputs look like following screen shot:
+  
+  ![alt text](UI/aws_mqtts_running.png?raw=true "Title")
+
+7. on your AWS account web page, go to the "Iot Core" service, then subscribe to the mqtt topic defined in the variable "my_topic", you will get the mqtt messages that your UP2 board has just published :
+
+   ![alt text](UI/aws_subscribe_mqtts_msg.png?raw=true "Title")
+
+  
