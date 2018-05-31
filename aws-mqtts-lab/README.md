@@ -1,5 +1,5 @@
 # how to run
-1. be sure you have successfully run the other labs at least including the Lab2( see Finished_Lab2_read_sensor.js ), then login your AWS account and go to the new device configuration page: 
+1. be sure you have successfully run the other labs at least including the Lab2( Finished_Lab2_read_sensor.js ), then login your AWS account and go to the new device configuration page: 
 
   ![alt text](UI/aws_iot_go_to_new_device_config.png?raw=true "Title")
 
@@ -7,14 +7,14 @@
 
   ![alt text](UI/aws_iot_init_new_device.png?raw=true "Title")
 
-3. download the connection kit packages, which is an archive(zip) including several key/cert files, then unzip the files to working dir.
+3. download the connection kit packages, which is an archive(zip) including several key/cert files, then unzip the files to source code dir.
 
   ![alt text](UI/aws_iot_connection_kit.png?raw=true "Title")
 
-4. Edit aws_mqtts_lab.js to match your own UP2 board and aws account settings, following below comments
+4. edit aws_mqtts_lab.js to match your own UP2 board and aws account settings, following below comments
 
   ```java
-  const my_topic = 'com/intel/fpei/up2-01'; // the topic you want to publish to aws
+  const my_topic = 'com/intel/fpei/up2'; // the topic you want to publish to aws
   const interval = 2000; // interval between each publish
 
   const device = deviceModule({
@@ -35,7 +35,7 @@
 5. install the aws-iot-device-sdk
 
   ```shell
-  sudo npm install -g aws-iot-device-sdk
+  sudo npm install -g aws-iot-device-sdk # -g to install the sdk globally, instead of installing to current working dir.
   ```
 
 6. run the "aws_mqtts_lab.js" via below shell command
@@ -43,11 +43,11 @@
   ```shell
   sudo node aws_mqtts_lab.js
   ```
-  you will see the mqtt lab running, with outputs look like following screen shot:
+  you should see the mqtt lab running, with outputs look like following screen shot:
   
   ![alt text](UI/aws_mqtts_running.png?raw=true "Title")
 
-7. on your AWS account web page, go to the "Iot Core" service, then subscribe to the mqtt topic defined in the variable "my_topic", you will get the mqtt messages that your UP2 board has just published :
+7. on your AWS account web page, go to the "Iot Core" service, then subscribe to the mqtt topic defined in the variable "my_topic", you should see the mqtt messages that your UP2 board has just published :
 
    ![alt text](UI/aws_subscribe_mqtts_msg.png?raw=true "Title")
 
