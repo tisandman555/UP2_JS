@@ -19,8 +19,8 @@
   const device = deviceModule({
      keyPath: 'UP2-Fanjiang-P_Plus.private.key', // replace with your own key
      certPath: 'UP2-Fanjiang-P_Plus.cert.pem', // replace with your own cert
-     caPath: 'root-CA.crt', // replace with your own root ca
-     clientId: 'fpei', // make your self id
+     caPath: 'root-CA.crt',
+     clientId: 'fpei', // replace with your own client id
      region: 'us-west-2', // change to your own if it's different
      baseReconnectTimeMs: 4000, 
      keepalive: 0,
