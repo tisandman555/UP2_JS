@@ -10,7 +10,7 @@ sudo apt update
 sudo apt install libmraa1 libmraa-dev libmraa-java python-mraa python3-mraa node-mraa mraa-tools node-upm node-mraa python-upm python3-upm
 
 sudo apt install mosquitto (安装本地mosquitto服务，这样可以把mqtt broker地址指向localhost)
- 
+
 sudo apt install nodejs-legacy (这句可要可不要，ubuntu默认nodejs命令是’nodejs’， 如果习惯用’node’命令则安装这个包’
 
 mkdir work
