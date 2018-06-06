@@ -5,9 +5,9 @@ NodeJS samples for UP2 hands-on lab
 
 安装UP2的nodejs,python MRAA和UPM库
  
-sudo apt install nodejs npm
-
 sudo apt update
+
+sudo apt install nodejs npm
 
 sudo apt install libmraa1 libmraa-dev libmraa-java python-mraa python3-mraa node-mraa mraa-tools node-upm node-mraa python-upm python3-upm
 
