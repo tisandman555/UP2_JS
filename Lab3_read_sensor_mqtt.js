@@ -1,3 +1,5 @@
+//Topic range: Room100~Room119 Room200~Room219 Room300~Room319
+const TOPIC_UP2_SENSOR_DATA = 'Building01/Sensors/Room200';
 
 var mraa = require('mraa'); //require mraa
 console.log('MRAA Version: ' + mraa.getVersion()); //write the mraa version to the console
@@ -13,7 +15,7 @@ function read_sensor()
 }
 
 client.on('connect',function(){
-	//subscribe to topic 
+	//subscribe to the topic 
 
 })
 

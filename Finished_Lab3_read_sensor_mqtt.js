@@ -1,3 +1,5 @@
+//Topic range: Room100~Room119 Room200~Room219 Room300~Room319
+const TOPIC_UP2_SENSOR_DATA = 'Building01/Sensors/Room200';
 
 var mraa = require('mraa'); //require mraa
 console.log('MRAA Version: ' + mraa.getVersion()); //write the mraa version to the console
@@ -23,9 +25,9 @@ var client = mqtt.connect('mqtt://test.mosquitto.org');
 //var client = mqtt.connect('tcp://localhost:1883');
 
 client.on('connect',function(){
-    //subscribe to topic
+    //subscribe to the topic
     console.log('connect');
-    client.subscribe('user98/sensors/data')
+    client.subscribe(TOPIC_UP2_SENSOR_DATA);
 })
 
 var j=0;
@@ -47,7 +49,7 @@ function periodicActivity() {
     sensor_value.number = i;
     //publish message 
     var mqtt_msg = JSON.stringify(sensor_value);
-    client.publish('user98/sensors/data',mqtt_msg);
+    client.publish(TOPIC_UP2_SENSOR_DATA,mqtt_msg);
 };
 
 
