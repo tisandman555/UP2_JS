@@ -6,7 +6,8 @@ console.log('MRAA Version: ' + mraa.getVersion()); //write the mraa version to t
 
 mraa.addSubplatform(mraa.GROVEPI,"0");
 
-//add your code here
+// remove this log and add your code here
+console.log("function not implemented, please finish the coding first!\nYou can run Finished_Lab3_read_sensor_mqtt.js instead to view the expected output.")
 
 function read_sensor()
 {
